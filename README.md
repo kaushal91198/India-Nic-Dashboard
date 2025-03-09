@@ -20,4 +20,4 @@
     ```
     
 ### App Description:
-    Implemented a secure authentication system with role-based access control using Redis for session management and rate limiting.
+    Implemented a shopping cart feature for an e-commerce application :
