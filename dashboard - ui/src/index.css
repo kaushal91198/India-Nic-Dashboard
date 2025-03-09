@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Ubuntu Sans", sans-serif;
+
+  /* -----------------------------------------
+     Primary Colors
+     (Brand colors, slightly adjusted for dark mode backgrounds)
+  ----------------------------------------- */
+  --primary-100: #80aaff; /* Lighter accent of brand-blue for dark UI */
+  --primary-200: #0472fe; /* Main brand-blue (unchanged) */
+  --primary-300: #0465d9; /* Slightly darker than base for hover states, etc. */
+  --primary-400: #013d98; /* Darkest brand-blue for emphasis */
+
+  /* Text Colors for Primary Backgrounds */
+  --text-primary-100: #0a0c0f; /* Dark text on lighter primary (rare in dark mode) */
+  --text-primary-200: #ffffff; /* White text on base brand color */
+  --text-primary-300: #ffffff; /* White text on darker brand color */
+  --text-primary-400: #ffffff; /* White text on darkest brand color */
+
+  /* -----------------------------------------
+     Baseline Colors (Dark Mode Backgrounds)
+  ----------------------------------------- */
+  --baseline-100: #16191d; /* Main app background: dark neutral */
+  --baseline-200: #1d2126; /* Slightly lighter for secondary sections */
+  --baseline-300: #21262b; /* Another step lighter or accent background */
+  --baseline-400: #2a3036; /* Highest “baseline” background in dark mode */
+
+  /* Text Colors for Baseline Backgrounds */
+  --text-baseline-100: #ffffff; /* Light text for the darkest background */
+  --text-baseline-200: #eaeaea; /* Slightly off-white for contrast on dark */
+  --text-baseline-300: #eaeaea; /* Still readable on a medium-dark background */
+  --text-baseline-400: #ffffff; /* White text for darkest accent backgrounds */
+
+  /* -----------------------------------------
+     Utility Colors
+     (Kept the same brand colors but are often bright enough to “pop” on dark)
+  ----------------------------------------- */
+  --utils-danger: #e63946; /* Same Danger color */
+  --utils-info: #00b4d8; /* Same Info color */
+  --utils-success: #2fd45c; /* Same Success color */
+  --utils-warning: #fcbf49; /* Same Warning color */
+  --utils-imp: #ff6f61; /* Same Important color */
+
+  /* Text Colors for Utility Colors */
+  --text-utils-danger: #ffffff; /* White text on danger backgrounds */
+  --text-utils-info: #ffffff; /* White text on info backgrounds */
+  --text-utils-success: #ffffff; /* White text on success backgrounds */
+  --text-utils-warning: #000000; /* Black text on warning backgrounds */
+  --text-utils-imp: #ffffff; /* White text on important backgrounds */
+
+  /* -----------------------------------------
+     Borders
+     (Slightly lighter or same brand for consistency in dark mode)
+  ----------------------------------------- */
+  --border-primary: #0472fe; /* Same brand color for primary border */
+  --border-baseline: #3e4953; /* Subtle, medium-dark gray/blue for baseline borders */
+  --border-utils-accent: #0152cb; /* Accent border color */
+  --border-utils-danger: #e63946; /* Matches utils-danger */
+  --border-utils-success: #2fd45c; /* Matches utils-success */
+  --border-utils-warning: #fcbf49; /* Matches utils-warning */
+  --border-utils-info: #00b4d8; /* Matches utils-info */
+  --border-utils-imp: #ff6f61; /* Matches utils-imp */
+}
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: 1768px;
+
+  --spacing-*: initial;
+  --spacing-0: 0rem;
+  --spacing-10: 0.1rem;
+  --spacing-20: 0.2rem;
+  --spacing-30: 0.3rem;
+  --spacing-40: 0.4rem;
+  --spacing-50: 0.5rem;
+  --spacing-60: 0.6rem;
+  --spacing-70: 0.7rem;
+  --spacing-80: 0.8rem;
+  --spacing-90: 0.9rem;
+  --spacing-100: 1rem;
+  --spacing-150: 1.5rem;
+  --spacing-200: 2rem;
+  --spacing-250: 2.5rem;
+  --spacing-300: 3rem;
+  --spacing-350: 3.5rem;
+  --spacing-400: 4rem;
+  --spacing-450: 4.5rem;
+  --spacing-500: 5rem;
+  --spacing-550: 5.5rem;
+  --spacing-600: 6rem;
+  --spacing-650: 6.5rem;
+  --spacing-700: 7rem;
+  --spacing-750: 7.5rem;
+  --spacing-800: 8rem;
+  --spacing-850: 8.5rem;
+  --spacing-900: 9rem;
+  --spacing-950: 9.5rem;
+  --spacing-1000: 10rem;
+
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+
+  --color-text-primary-100: var(--text-primary-100);
+  --color-text-primary-200: var(--text-primary-200);
+  --color-text-primary-300: var(--text-primary-300);
+  --color-text-primary-400: var(--text-primary-400);
+
+  --color-baseline-100: var(--baseline-100);
+  --color-baseline-200: var(--baseline-200);
+  --color-baseline-300: var(--baseline-300);
+  --color-baseline-400: var(--baseline-400);
+
+  --color-text-baseline-100: var(--text-baseline-100);
+  --color-text-baseline-200: var(--text-baseline-200);
+  --color-text-baseline-300: var(--text-baseline-300);
+  --color-text-baseline-400: var(--text-baseline-400);
+
+  --color-utils-danger: var(--utils-danger);
+  --color-utils-info: var(--utils-info);
+  --color-utils-success: var(--utils-success);
+  --color-utils-warning: var(--utils-warning);
+  --color-utils-imp: var(--utils-imp);
+
+  --color-text-utils-danger: var(--text-utils-danger);
+  --color-text-utils-info: var(--text-utils-info);
+  --color-text-utils-success: var(--text-utils-success);
+  --color-text-utils-warning: var(--text-utils-warning);
+  --color-text-utils-imp: var(--text-utils-imp);
+
+  --color-border-primary: var(--border-primary);
+  --color-border-baseline: var(--border-baseline);
+  --color-border-utils-accent: var(--border-utils-accent);
+  --color-border-utils-danger: var(--border-utils-danger);
+  --color-border-utils-success: var(--border-utils-success);
+  --color-border-utils-warning: var(--border-utils-warning);
+  --color-border-utils-info: var(--border-utils-info);
+  --color-border-utils-imp: var(--border-utils-imp);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
